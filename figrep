@@ -1,0 +1,7 @@
+#!/bin/sh
+# Simple file to use find with grep
+#
+# usage is figrep <filename> <searchterm>
+# e.g. figrep *.cpp SomeClass
+#
+find -L . -name "$1" -exec grep $3 -H "$2" {} \;
