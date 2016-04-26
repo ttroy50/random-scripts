@@ -7,8 +7,9 @@
 # TODO update to python3
 #
 # Tested on Ubuntu 14.04 
-# Ubuntu 14.04  has a wrapper script around the real gnome-terminal which no longer supports --disable-factory. 
-# May not work on other programs
+#
+# Uses a custom wrapper script around the real gnome-terminal based on the one from Ubuntu 14.04
+# The script gnome-terminal-custom should be in your path
 
 import os, sys
 import pwd
@@ -23,7 +24,7 @@ homedir = expanduser("~")
 
 Config = {
     # The command
-    'gt-command': "gnome-terminal",
+    'gt-command': "gnome-terminal-custom",
 
     'appDir': homedir + "/.local/share/applications/",
     
